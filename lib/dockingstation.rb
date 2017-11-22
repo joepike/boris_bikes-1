@@ -12,7 +12,9 @@ class DockingStation
   end
 
   def release_bike
-    Bike.new
-    # @bikes.empty? ? "There are no bikes" : @bikes.pop
+    # Bike.new
+    raise "No bikes available" if @bikes.empty?
+    #fail "No bikes available" unless @bikes
+    @bikes.pop
   end
 end
